@@ -1,0 +1,28 @@
+.navbar{
+  height: 60px;
+  background-color: $inverse;
+  position: fixed;
+  margin-top: -60px;
+  @include outer-container(12);
+  @include span-columns(12);
+  border-bottom:  4px solid $inverse;
+  .title{
+    @extend %base-forms;
+    @include span-columns(10);
+    font-size:  1em;
+    text-transform: uppercase;
+    padding-right:  0;
+  }//.title
+  span{
+    @extend %base-forms;
+    padding: 0;
+    text-align: center;
+    font-size:  1.4em;
+    @include span-columns(2);
+    @include omega();
+    cursor: pointer;
+  }//
+  .ion-power{
+    color: red;
+  }
+}

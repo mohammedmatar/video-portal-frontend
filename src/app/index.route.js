@@ -16,8 +16,15 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       url: '/login',
       templateUrl: getView('login'),
       controller: 'LoginController',
-      controllerAs: 'login'
+      controllerAs: 'vm'
     })
+    .state('dashboard', {
+      url: '/dashboard',
+      templateUrl: getView('dashboard'),
+      controller: 'DashboardController',
+      controllerAs: 'vm'
+    })
+  
   ;
 
   $urlRouterProvider.otherwise('/');

@@ -1,14 +1,12 @@
 //
    Created by mohammed on 6/23/16.
-
-form
+form(ng-submit="vm.login()")
   .input-container
     label
       span(class="icon ion-person", ng-class="activeInput === 'username'")
-    input(type="text", placeholder="Enter your name", ng-focus="activeInput = 'username'")
+    input(type="text", placeholder="Username", ng-focus="activeInput = 'username'", ng-model="vm.username", autofocus)
   .input-container
     label
       span(class="icon ion-locked", ng-class="activeInput === 'password'")
-    input(type="password", placeholder="Password", ng-focus="activeInput = 'password'")
-  input(type="submit")
-
+    input(type="password", placeholder="Password", ng-focus="activeInput = 'password'", ng-model="vm.password")
+  input(type="submit", value="Login")
