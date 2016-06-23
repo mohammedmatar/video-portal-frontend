@@ -1,0 +1,106 @@
+%base-forms{
+  height: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+  padding: 0 50px 0 30px;
+}
+%iform{
+  line-height: $base-forms-line-height;
+  height:  $base-forms-height;
+  @include padding(10px 39px 10px 15px);
+  border: 2px $turquoise $base-border-color;
+  border-radius: $border-radius-base;
+  @include prefixer(box-shadow, none);
+  outline: none;
+}
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: $small-spacing / 2;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: $small-spacing / 2;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+#{$all-text-inputs},
+select[multiple] {
+  @include span-columns(12);
+  background-color: $base-background-color;
+  border: none;
+  border-bottom: $base-border;
+  border-radius: 0;
+  box-sizing: border-box;
+  transition: border-color $base-duration $base-timing;
+  @extend %base-forms;
+  &:hover {
+    border-color: shade($turquoise, 20%);
+  }
+
+  &:focus {
+    border-color: $turquoise;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($base-background-color, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $base-border;
+    }
+  }
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1em;
+  height:      6em;
+  @include padding(1em 1em 1em 1em);
+  text-underline: black dash;
+}
+
+[type="search"] {
+  appearance: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: $small-spacing / 2;
+}
+
+[type="file"] {
+  margin-bottom: $small-spacing;
+  width: 100%;
+}
+
+select {
+  margin-bottom: $small-spacing;
+  max-width: 100%;
+  width: 40%;
+  @extend %iform;
+  background-color: $turquoise;
+  color: $inverse;
+}
+

@@ -1,0 +1,14 @@
+//
+   Created by mohammed on 6/23/16.
+
+form
+  .input-container
+    label
+      span(class="icon ion-person", ng-class="activeInput === 'username'")
+    input(type="text", placeholder="Enter your name", ng-focus="activeInput = 'username'")
+  .input-container
+    label
+      span(class="icon ion-locked", ng-class="activeInput === 'password'")
+    input(type="password", placeholder="Password", ng-focus="activeInput = 'password'")
+  input(type="submit")
+

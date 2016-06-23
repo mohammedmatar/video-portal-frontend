@@ -1,0 +1,21 @@
+
+.input-container{
+  @include span-columns(12);
+  label{
+    //@include span-columns(2);
+    position: absolute;
+    right: 0;
+    // @info default font size and height, line height ... etc for forms > style->base->_forms.scss
+    @extend %base-forms;
+    text-align: right;
+    font-weight: 900;
+    font-size:   2em;
+    padding: 0 15px 0 15px;
+    color: $turquoise;
+  }//end-label
+
+}
+input:focus + label {
+  /* do something with the label */
+  color: white;
+}

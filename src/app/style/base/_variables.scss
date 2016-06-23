@@ -1,0 +1,223 @@
+// forms configurations
+$base-forms-height: 2.8em;
+$base-forms-line-height: 1.4em;
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+//$base-font-family: $font-stack-system;
+$base-font-family: 'Abel', sans-serif;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 2px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+//$form-box-shadow: none;
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// == Colors
+//
+//##
+
+// Color swatches
+$turquoise:                 #1abc9c;
+$green-sea:                 #16a085;
+
+$emerald:                   #2ecc71;
+$nephritis:                 #27ae60;
+
+$peter-river:               #3498db;
+$belize-hole:               #2980b9;
+
+$amethyst:                  #9b59b6;
+$wisteria:                  #8e44ad;
+
+$wet-asphalt:               #34495e;
+$midnight-blue:             #2c3e50;
+
+$sun-flower:                #f1c40f;
+$orange:                    #f39c12;
+
+$carrot:                    #e67e22;
+$pumpkin:                   #d35400;
+
+$alizarin:                  #e74c3c;
+$pomegranate:               #c0392b;
+
+$clouds:                    #ecf0f1;
+$silver:                    #bdc3c7;
+
+$concrete:                  #95a5a6;
+$asbestos:                  #7f8c8d;
+
+// Grays
+$gray:                      $concrete;
+$gray-light:                $silver;
+$inverse:                   white;
+
+// Brand colors
+$brand-primary:             $wet-asphalt;
+$brand-secondary:           $turquoise;
+$brand-success:             $emerald;
+$brand-warning:             $sun-flower;
+$brand-danger:              $alizarin;
+$brand-info:                $peter-river;
+
+
+//## Settings for some of the most global styles.
+
+$body-bg:                   #fff;
+$text-color:                $brand-primary;
+
+//** Global textual link color.
+$link-color:                $green-sea;
+$link-hover-color:          $turquoise;
+
+
+//## Font, line-height for body text, headings, and more.
+
+//$font-family-base:          "Lato", Helvetica, Arial, sans-serif;
+$font-family-base:          'Abel', sans-serif;
+$font-family-demo:          "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-monospace:     Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-size-base:            18px;
+
+//Border-radius
+$border-radius-base:        4px;
+$border-radius-large:       6px;
+$border-radius-small:       3px;
+
+$input-bg:    $inverse;
+//$input-bg-disabled: lighten($grey, 10%);
+
+$input-border-radius:       $border-radius-large;
+
+$switch-border-radius:       30px;
+$switch-width:               80px;
+
+$dropdown-background:        mix($inverse, $brand-primary, 94%);
+
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+$zindex-navbar:              1000;
+$zindex-navbar-fixed:        1030;
+$navbar-height-base:         53px;
+$navbar-height-large:        76px;
+$navbar-input-line-height:   1.4; // ~21px
+//$navbar-margin-bottom:       $line-height-computed;
+$navbar-border-radius:       $border-radius-large;
+
+//$navbar-default-bg:          saturate(mix(tint($brand-primary, 91%), -18), 2%);
+
+// Navbar links
+$navbar-default-link-color:           $brand-primary;
+$navbar-default-link-hover-color:     $brand-secondary;
+$navbar-default-link-hover-bg:        transparent;
+$navbar-default-link-active-color:    $brand-secondary;
+$navbar-default-link-active-bg:       transparent;
+$navbar-default-link-disabled-color:  #ccc;
+$navbar-default-link-disabled-bg:     transparent;
+
+// Navbar nav carets
+$navbar-default-caret-color:          $navbar-default-link-color;
+$navbar-default-caret-hover-color:    $navbar-default-link-hover-color;
+$navbar-default-caret-active-color:   $navbar-default-link-active-color;
+
+// Navbar brand label
+$navbar-default-brand-color:          $navbar-default-link-color;
+$navbar-default-brand-hover-color:    $navbar-default-link-hover-color;
+$navbar-default-brand-hover-bg:       transparent;
+
+// Navbar toggle
+$navbar-default-toggle-color:         $navbar-default-link-color;
+$navbar-default-toggle-hover-color:   $navbar-default-link-hover-color;
+
+// Navbar form
+$navbar-default-form-icon:            desaturate(tint($brand-primary, 45%), 2%);
+//$navbar-default-form-border:          shade($navbar-default-bg, 3%);
+
+
+// Inverted navbar
+// Reset inverted navbar basics
+$navbar-inverse-divider:              darken($brand-primary, 3%);
+
+// Reset inverted navbar basics
+$navbar-inverse-color:                $inverse;
+$navbar-inverse-bg:                   $brand-primary;
+$navbar-inverse-border:               darken($navbar-inverse-bg, 10%);
+
+// Inverted navbar links
+$navbar-inverse-link-color:           $inverse;
+$navbar-inverse-link-hover-color:     $brand-secondary;
+$navbar-inverse-link-hover-bg:        transparent;
+$navbar-inverse-link-active-color:    $navbar-inverse-link-color;
+$navbar-inverse-link-active-bg:       $brand-secondary;
+$navbar-inverse-link-disabled-color:  #444;
+$navbar-inverse-link-disabled-bg:     transparent;
+
+// Navbar nav carets
+$navbar-inverse-caret-color:          lighten(desaturate($brand-primary, 7%), 9%);
+$navbar-inverse-caret-hover-color:    $navbar-inverse-link-hover-color;
+$navbar-inverse-caret-active-color:   $navbar-inverse-link-active-color;
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color:          $navbar-inverse-link-color;
+$navbar-inverse-brand-hover-color:    $navbar-inverse-link-hover-color;
+$navbar-inverse-brand-hover-bg:       transparent;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-color:         $navbar-inverse-link-color;
+$navbar-inverse-toggle-hover-color:   $navbar-inverse-link-hover-color;
+
+// Navbar form
+$navbar-inverse-form-bg:              darken($brand-primary, 6%);
+$navbar-inverse-form-placeholder:     desaturate(lighten($brand-primary, 13%), 7%);
+$navbar-inverse-form-icon:            desaturate(lighten($brand-primary, 13%), 6%);
+$navbar-inverse-form-border:          $navbar-inverse-divider;
+
+// Dropdown menu
+$navbar-inverse-dropdown-arrow:             $navbar-inverse-bg;
+$navbar-inverse-dropdown-bg:                $navbar-inverse-bg;
+$navbar-inverse-dropdown-link-color:        mix($navbar-inverse-bg, $navbar-inverse-color, 15%);
+$navbar-inverse-dropdown-link-hover-color:  $inverse;
+$navbar-inverse-dropdown-link-hover-bg:     $brand-secondary;
+
