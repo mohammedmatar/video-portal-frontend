@@ -1,10 +1,11 @@
 export class AuthService {
-  constructor($log, md5, $http, $sessionStorage){
+  constructor($log, md5, $http, $sessionStorage, $state){
     'ngInject';
     this.$log = $log;
     this.md5  = md5;
     this.$http = $http;
     this.$sessionStorage = $sessionStorage;
+    this.$state = $state;
   }
   authenticate(user){
     user.password = generateMD5Hash(user.password, this.md5);
@@ -13,8 +14,16 @@ export class AuthService {
       return  resp;
     }, (err)=>{return {code: 500, error: err}});
   }
-  isLogin(){ 
-    return (this.$sessionStorage.sessionId !== null) ? 'rrrrr' : 'rf';
+  isLogin(){
+    try{
+      return ( this.$sessionStorage.currentUser.sessionId !== null ) ? true : false;
+    }catch(e){
+      return false;
+    }
+  }
+  logout(){
+    this.$sessionStorage.currentUser = null;
+    this.$state.go('login');
   }
 
 }

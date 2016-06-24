@@ -1,0 +1,29 @@
+.video-player{
+  margin-top: 60px;
+  height:  4em;
+
+  width: 100%;
+  .videogular-container{
+    @include span-columns(12);
+    height: 300px;
+
+
+  }
+  h1{
+    @extend %base-forms;
+    @include span-columns(12);
+
+  }
+  p{
+    @include span-columns(12);
+    //height:  3em;
+    line-height: 1.7em;
+    margin: auto;
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 2.2em;
+    @include padding(.8em .8em .8em .8em );
+    background-color: $inverse;
+    color: $turquoise;
+  }
+}

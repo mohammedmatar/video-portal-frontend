@@ -1,0 +1,17 @@
+.rating{
+  @extend %base-forms;
+  position: absolute;
+  bottom:  0;
+  width:   100%;
+  font-size: 1.8em;
+  color: darken($turquoise, 90%);
+  span{
+    margin-left: .2em;
+    margin-right: .2em;
+  }
+  background-color: $inverse;//rgba(lighten($inverse, 40%), .8);
+  .show-star{
+    color:  RED;
+  }
+
+}

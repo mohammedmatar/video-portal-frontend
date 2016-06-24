@@ -6,19 +6,20 @@ import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
 import { LoginController } from './pages/login/login.controller';
 import { DashboardController } from './pages/dashboard/dashboard.controller';
+import { VideoPlayerController } from './pages/video_player/video_player.controller';
 
 import { HeaderComponentController } from '../app/components/header/header.component';
-import {DashboardListVideoController } from '../app/components/dashboard-list-video/dashboard-list-video.component';
+import { DashboardListVideoController } from '../app/components/dashboard-list-video/dashboard-list-video.component';
+import { RatePickerController } from '../app/components/ratepicker/ratepicker.component';
+import { RatingComponentController } from '../app/components/rating/rating.component.js';
 
 // import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { ToastService } from  '../app/services/ToastService/ToastService.service';
-import {AuthService }   from  '../app/services/Auth/Auth.service';
+import { AuthService }   from  '../app/services/Auth/Auth.service';
 import { VideoListFeatcher }   from  '../app/services/VideoListFeatcher/VideoListFeatcher.service';
 
-// import { NavbarDirective } from '../app/components/navbar/navbar.directive';
-// import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
 
-angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'restangular', 'ui.router', 'toastr', 'angular-md5', 'ngStorage', 'infinite-scroll', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', 'com.2fdevs.videogular.plugins.buffering'])
+angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'restangular', 'ui.router', 'toastr', 'angular-md5', 'ngStorage', 'infinite-scroll', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', 'com.2fdevs.videogular.plugins.buffering', 'com.2fdevs.videogular.plugins.overlayplay'])
   // .constant('malarkey', malarkey)
   // .constant('moment', moment)
   .config(config)
@@ -33,6 +34,8 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMes
   .controller('MainController', MainController)
   .controller('LoginController', LoginController)
   .controller('DashboardController', DashboardController)
+  .controller('VideoPlayerController', VideoPlayerController)
+
   .component('headerSection', {
     templateUrl: './app/components/header/header.component.html',
     controller: HeaderComponentController,
@@ -41,6 +44,21 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMes
   .component('dashboardListVideo', {
     templateUrl: './app/components/dashboard-list-video/dashboard-list-video.component.html',
     controller: DashboardListVideoController
+  })
+  .component('rating', {
+    templateUrl: '../app/components/rating/rating.component.html',
+    controller: RatingComponentController,
+    bindings: {
+      ratings: '='
+    }
+  })
+  .component('ratePicker', {
+    templateUrl: '../app/components/ratepicker/ratepicker.component.html',
+    controller: RatePickerController,
+    controllerAs: 'vm',
+    bindings: {
+      videoId: '='
+    }
   })
 ;
 

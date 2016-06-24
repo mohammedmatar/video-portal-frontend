@@ -1,7 +1,8 @@
 .navbar{
   height: 60px;
-  background-color: $inverse;
+  background-color: rgba(lighten($inverse, 5%), .8);
   position: fixed;
+  z-index:  1000;
   margin-top: -60px;
   @include outer-container(12);
   @include span-columns(12);

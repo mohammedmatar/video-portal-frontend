@@ -3,13 +3,13 @@
  */
 
 export class LoginController {
-  constructor(AuthService, ToastService, $sessionStorage, $log){
+  constructor(AuthService, ToastService, $sessionStorage, $state){
     'ngInject';
 
     this.AuthService = AuthService;
     this.ToastService = ToastService;
     this.$sessionStorage = $sessionStorage;
-    this.$log = $log;
+    this.$state = $state;
   }
   $onInit(){
     this.username = '';this.password = '';
@@ -24,12 +24,12 @@ export class LoginController {
       if(data.data.status === 'error'){
         this.ToastService.error('incorrect', 'df');
       }else if(data.data.status === 'success'){
-        this.$log.debug(data.data);
         this.$sessionStorage.currentUser = {
           sessionId: data.data.sessionId,
           username:  data.data.username
         };
         this.ToastService.success('Welcome you ', data.data.username);
+        this.$state.go('dashboard');
       }
     });
     this.username = '';this.password = '';

@@ -1,8 +1,10 @@
 export class HeaderComponentController {
-  constructor(){
+  constructor(AuthService){
     'ngInject';
-    // $window.alert('afdaffag');
-    this.mola = "afdasf";
+    this.AuthService  = AuthService;
+  }
+  logout(){
+    this.AuthService.logout();
   }
 
 }

@@ -1,0 +1,17 @@
+.rate-me{
+  @extend %base-forms;
+  @include span-columns(12);
+  text-align: center;
+  span{
+    margin-right: .4em;
+    margin-left: .4em;
+    outline: none;
+    cursor: pointer;
+    &:focus{
+      outline: none;
+    }
+  }
+  .you-rated-me{
+    color: red;
+  }
+}

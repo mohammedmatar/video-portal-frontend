@@ -27,12 +27,14 @@
   @include clearfix;
   margin-top: 60px;
   .grid-item {
+    position: relative;
     //$grid-item-background
     background: $turquoise;
     border-bottom: $grid-item-border-size solid $grid-items-background;
     border-left: ($grid-item-border-size / 2) solid $grid-items-background;
     border-right: ($grid-item-border-size / 2) solid $grid-items-background;
-    border-top: 0;
+    border-top: 2px solid rgba($turquoise, .5);
+    //border: 0; //override borders
     cursor: pointer;
     float: left;
     height: $grid-item-height;
@@ -64,8 +66,13 @@
     //    }
     //  }
     //}
-  }
+    .player{
 
+      font-size: 8em;
+      background-color: $turquoise;
+      color: $inverse;
+    }
+  }
   .grid-item img {
     //display: block;
     height: 3em;
@@ -83,13 +90,19 @@
   }
 
   .grid-item p {
+    //display: none;
     color: transparentize($grid-item-color, 0.3);
-    line-height: 1.5em;
+    line-height: 1.7em;
     margin: auto;
     text-align: justify;
     text-justify: inter-word;
     text-indent: 2.2em;
-    @include padding(.8em .3em .8em .3em);
+    //background-color:  rgba;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: red;
 
 
     @include media($medium-screen) {
@@ -98,6 +111,7 @@
   }
 
   .grid-item-big {
+
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
@@ -109,11 +123,12 @@
     }
   }
 
-  .grid-item-image {
-    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
-    background-color: $grid-item-background;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  //.grid-item-image {
+  //  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+  //  background-color: $grid-item-background;
+  //  background-position: top;
+  //  background-repeat: no-repeat;
+  //  background-size: cover;
+  //}
 }
+

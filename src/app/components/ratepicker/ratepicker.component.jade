@@ -1,0 +1,7 @@
+.rate-me
+  span(class="icon ion-heart", ng-class="(vm.rate >= 1)?'you-rated-me':''", ng-click="vm.postClientRate(1)")
+  span(class="icon ion-heart", ng-class="(vm.rate >= 2)?'you-rated-me':''", ng-click="vm.postClientRate(2)")
+  span(class="icon ion-heart", ng-class="(vm.rate >= 3)?'you-rated-me':''", ng-click="vm.postClientRate(3)")
+  span(class="icon ion-heart", ng-class="(vm.rate >= 4)?'you-rated-me':''", ng-click="vm.postClientRate(4)")
+  span(class="icon ion-heart", ng-class="(vm.rate >= 5)?'you-rated-me':''", ng-click="vm.postClientRate(5)")
+

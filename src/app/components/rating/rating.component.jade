@@ -1,0 +1,2 @@
+.rating
+  span(class="icon ion-heart", ng-repeat="showStar in $ctrl.getRank($ctrl.ratings) track by $index", ng-class="( showStar === 1 )?'show-star':'' ")

@@ -1,0 +1,13 @@
+//br
+//br
+//br
+header-section
+.video-player
+  h1 {{vm.name}}
+  .videogular-container
+    videogular(vg-theme="'http://www.videogular.com/styles/themes/default/latest/videogular.css'")
+      vg-media(vg-src="vm.url", vg-native-controls="true")
+      vg-buffering
+      vg-overlay-play
+  rate-picker(video-id="vm._id")
+  p {{vm.desc | limitTo: 250}}

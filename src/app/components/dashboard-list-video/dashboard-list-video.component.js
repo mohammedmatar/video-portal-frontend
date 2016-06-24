@@ -1,8 +1,9 @@
 export class DashboardListVideoController{
-  constructor(VideoListFeatcher, $log, $window){
+  constructor(VideoListFeatcher, $sessionStorage, $log, $window){
     'ngInject';
     this.VideoListFeatcher  = VideoListFeatcher;
     this.loaderBusy = true;
+    this.sessionId  =   $sessionStorage.currentUser.sessionId;
     // this.$sce = $sce;
     this.$log = $log;
     this.$window   =  $window;
