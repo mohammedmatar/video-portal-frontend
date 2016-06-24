@@ -27,7 +27,7 @@ angular.module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMes
   .run(runBlock)
   .service('ToastService', ToastService)
   .service('AuthService', AuthService)
-  .service('VideoListFeatcher', VideoListFeatcher)
+  .service('VideoListFeatcher', VideoListFeatcher) 
   // .service('webDevTec', WebDevTecService)
 
 

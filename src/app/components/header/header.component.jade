@@ -1,7 +1,16 @@
 section(class="navbar")
-  header(class="title")
+  header(class="noselect title", ng-click="$ctrl.goToState('dashboard')")
     |Crossover Video Portal
-  span(class="icon ion-power", ng-click="$ctrl.logout()")
+  span(class="noselect icon ion-navicon-round", ng-click="$ctrl.showMenu = !$ctrl.showMenu")
+.awesome-menu(ng-show="$ctrl.showMenu === true", ng-click="$ctrl.showMenu = false")
+  span(class="noselect icon ion-reply", ng-click="$ctrl.goToState('dashboard')")
+  span(class="noselect icon ion-power", ng-click="$ctrl.logout()")
+  span(class="noselect icon ion-social-octocat", ng-click="$ctrl.goToWebsite('https://github.com/mohammedmatar/')")
+  span(class="noselect icon ion-social-linkedin", ng-click="$ctrl.goToWebsite('https://www.linkedin.com/in/jmatar')")
+
+
+  //span(class="icon ion-power", ng-click="$ctrl.logout()")
+
 //header(class="main-header")
 //  | main header
 

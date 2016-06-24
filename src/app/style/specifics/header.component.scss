@@ -9,21 +9,57 @@
   border-bottom:  4px solid $inverse;
   .title{
     @extend %base-forms;
-    @include span-columns(10);
+    @include span-columns(9);
     font-size:  1em;
     text-transform: uppercase;
     padding-right:  0;
+    cursor: pointer;
+    color: darken($turquoise, 15%);
+    &:hover{
+      //color: $turquoise;
+    }
+    &:focus{
+      outline: none;
+    }
+
   }//.title
   span{
     @extend %base-forms;
     padding: 0;
     text-align: center;
-    font-size:  1.4em;
-    @include span-columns(2);
+    font-size:  1.6em;
+    @include span-columns(3);
     @include omega();
     cursor: pointer;
+
+    &:focus{
+      outline: none;
+    }
+
   }//
   .ion-power{
     color: red;
+  }
+  //.ion-navicon-round{}
+}
+.awesome-menu{
+  position: fixed;
+  z-index:  2000;
+  top: 60px;
+  background-color: rgba(darken($turquoise, 30%), .7);
+  color: $inverse;
+  @include span-columns(12);
+  @include fill-parent;
+  height: 100%;
+  span{
+    @include span-columns(6);
+    @include omega(2n);
+    margin-top:  1em;
+    cursor: pointer;
+    font-size: 3em;
+    text-align: center;
+    &:focus{
+      outline: none;
+    }
   }
 }
